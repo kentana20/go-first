@@ -3,6 +3,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -17,7 +18,8 @@ func main() {
 		in, _ = strconv.Atoi(flag.Arg(i))
 		sum += in
 	}
-	var out string = strconv.Itoa(sum)
+	//var out string = strconv.Itoa(sum)
+	var out string = fmt.Sprint(sum)
 	os.Stdout.WriteString(out)
 
 }
